@@ -1,0 +1,4 @@
+rootProject.name = 'Music-store'
+
+include 'cms-backend'
+include 'cms-gui'
