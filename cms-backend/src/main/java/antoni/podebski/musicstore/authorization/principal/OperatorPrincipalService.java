@@ -3,6 +3,7 @@ package antoni.podebski.musicstore.authorization.principal;
 import antoni.podebski.musicstore.common.error.ErrorCode;
 import antoni.podebski.musicstore.operator.model.Operator;
 import antoni.podebski.musicstore.operator.repository.OperatorRepository;
+import java.time.OffsetDateTime;
 import java.util.Collections;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -22,6 +23,9 @@ public class OperatorPrincipalService implements UserDetailsService {
 	@Override
 	public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
 		final Operator operator = repository.findByEmail(email).orElseThrow(() -> new UsernameNotFoundException(ErrorCode.EMAIL_INVALID));
+
+		operator.setLastLoggedAt(OffsetDateTime.now());
+		repository.save(operator);
 
 		return new OperatorPrincipal(operator, Optional.ofNullable(operator.getRoles())
 				.orElse(Collections.emptySet())

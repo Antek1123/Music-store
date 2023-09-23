@@ -1,8 +1,10 @@
 package antoni.podebski.musicstore.operator.dto;
 
+import static antoni.podebski.musicstore.common.date.Dates.DATE_FORMAT_LONG;
 import static antoni.podebski.musicstore.common.date.Dates.DATE_FORMAT_SHORT;
 
 import antoni.podebski.musicstore.common.deserializer.OffsetDateTimeDeserializer;
+import antoni.podebski.musicstore.common.error.ErrorCode;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -20,30 +22,23 @@ public class OperatorDto {
 
     private Long id;
 
-    @NotBlank(message = "Operator name cannot be null")
+    @NotBlank(message = ErrorCode.NOT_BLANK)
     private String name;
 
-    @NotBlank(message = "Operator surname cannot be null")
+    @NotBlank(message = ErrorCode.NOT_BLANK)
     private String surname;
 
     @Email
-    @NotBlank(message = "Operator email cannot be null")
+    @NotBlank(message = ErrorCode.NOT_BLANK)
     private String email;
 
-    @NotBlank(message = "Operator password cannot be null")
+    @NotBlank(message = ErrorCode.NOT_BLANK)
     private String password;
 
-//    private Address address; //todo AddressDto
-
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = DATE_FORMAT_SHORT)
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = DATE_FORMAT_LONG)
     @JsonSerialize(using = OffsetDateTimeSerializer.class)
     @JsonDeserialize(using = OffsetDateTimeDeserializer.class)
-    private OffsetDateTime birthDate;
-
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = DATE_FORMAT_SHORT)
-    @JsonSerialize(using = OffsetDateTimeSerializer.class)
-    @JsonDeserialize(using = OffsetDateTimeDeserializer.class)
-    private OffsetDateTime dateOfEmployment;
+    private OffsetDateTime lastLoggedAt;
 
     public Long getId() {
         return id;
@@ -83,6 +78,14 @@ public class OperatorDto {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public OffsetDateTime getLastLoggedAt() {
+        return lastLoggedAt;
+    }
+
+    public void setLastLoggedAt(OffsetDateTime lastLoggedAt) {
+        this.lastLoggedAt = lastLoggedAt;
     }
 
 }

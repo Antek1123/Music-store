@@ -53,7 +53,6 @@ public class InstrumentService {
 		target.setWeight(source.getWeight());
 		target.setState(source.getState());
 		target.setSerialNumber(source.getSerialNumber());
-		target.setProducedNumber(source.getProducedNumber());
 		target.setInstrumentType(source.getInstrumentType());
 		priceRepository.saveAll(source.getPrices()); //merge price napisać
 

@@ -28,4 +28,6 @@ public final class ErrorCode {
     public static final String PASSWORD_NOT_CONTAINS_SPECIAL_CHARACTER = "PASSWORD_NOT_CONTAINS_SPECIAL_CHARACTER";
     public static final String PASSWORD_TOO_SHORT = "PASSWORD_TOO_SHORT";
 
+    public static final String UNKNOWN_SERVER_ERROR = "UNKNOWN_SERVER_ERROR";
+
 }

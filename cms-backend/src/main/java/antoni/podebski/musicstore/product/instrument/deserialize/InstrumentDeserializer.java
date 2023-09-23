@@ -9,7 +9,6 @@ public class InstrumentDeserializer {
 
 	public static Instrument deserialize(InstrumentDto instrumentDto) {
 		Instrument instrument = ProductDeserializer.deserialize(instrumentDto, new Instrument());
-		instrument.setProducedNumber(instrumentDto.getProducedNumber());
 		instrument.setSerialNumber(instrumentDto.getSerialNumber());
 		instrument.setInstrumentType(InstrumentType.of(instrumentDto.getInstrumentType().getName()));
 

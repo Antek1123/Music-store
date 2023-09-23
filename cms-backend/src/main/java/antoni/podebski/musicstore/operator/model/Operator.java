@@ -28,7 +28,7 @@ import org.hibernate.annotations.Where;
         }),
         @NamedEntityGraph(name = "Operator.withRolesAndAddress", attributeNodes = {
                 @NamedAttributeNode("roles"),
-                @NamedAttributeNode("address"),
+//                @NamedAttributeNode("address"),
         })
 })
 public class Operator {
@@ -52,15 +52,12 @@ public class Operator {
     @OneToMany(mappedBy = "operator")
     private Set<OperatorToRole> roles;
 
-    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    @JoinColumn(name = "address_id", referencedColumnName = "id")
-    private Address address;
+//    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+//    @JoinColumn(name = "address_id", referencedColumnName = "id")
+//    private Address address;
 
-    @Column(name = "birth_date")
-    private OffsetDateTime birthDate;
-
-    @Column(name = "date_of_employment")
-    private OffsetDateTime dateOfEmployment;
+    @Column(name = "last_logged_at")
+    private OffsetDateTime lastLoggedAt;
 
     @Column(name = "deleted_at")
     private OffsetDateTime deletedAt;
@@ -113,28 +110,12 @@ public class Operator {
         this.roles = roles;
     }
 
-    public Address getAddress() {
-        return address;
+    public OffsetDateTime getLastLoggedAt() {
+        return lastLoggedAt;
     }
 
-    public void setAddress(Address address) {
-        this.address = address;
-    }
-
-    public OffsetDateTime getBirthDate() {
-        return birthDate;
-    }
-
-    public void setBirthDate(OffsetDateTime birthDate) {
-        this.birthDate = birthDate;
-    }
-
-    public OffsetDateTime getDateOfEmployment() {
-        return dateOfEmployment;
-    }
-
-    public void setDateOfEmployment(OffsetDateTime dateOfEmployment) {
-        this.dateOfEmployment = dateOfEmployment;
+    public void setLastLoggedAt(OffsetDateTime lastLoggedAt) {
+        this.lastLoggedAt = lastLoggedAt;
     }
 
     public OffsetDateTime getDeletedAt() {

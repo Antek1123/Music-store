@@ -1,0 +1,79 @@
+@import "src/styles/base/colors";
+
+.app-header {
+
+  .operator {
+    float: right;
+  }
+
+  .dropdown-nav {
+    float: left;
+  }
+
+  .dropdown-icon {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+  }
+
+  .operator-btn {
+    background: transparent no-repeat;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    outline: none;
+    margin: 5px;
+    color: $color-light-grey;
+  }
+
+  .operator-name {
+    font-size: large;
+  }
+
+  .operator-icon {
+    font-size: large;
+    margin-left: 0;
+  }
+}
+
+.operator-modal-wrapper {
+  position: absolute;
+  top: 2.3rem;
+  right: 0;
+  margin: 10px;
+  float: right;
+  background: $color-navi-blue;
+  padding: 15px;
+  border-radius: 15px;
+  color: $color-light-grey;
+  text-align: left;
+}
+
+.operator-modal-row {
+  margin: 10px;
+  font-size: math;
+
+  .icon {
+    margin-right: 10px;
+    margin-left: 0;
+  }
+}
+
+.operator-modal-btn {
+  padding: 5px;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  box-shadow: -6px 6px 10px 0 rgba(0, 0, 0, 0.2);
+  background: $color-grey;
+  color: $color-light-grey;
+  font-weight: bold;
+}
+
+.operator-modal-btn:hover {
+  box-shadow: inset -6px 6px 10px 0 rgba(0, 0, 0, 0.2);
+  background: $color-dark-blue;
+  color: $color-turquoise;
+}

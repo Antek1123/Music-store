@@ -9,7 +9,6 @@ public class InstrumentSerializer {
 
 	public static InstrumentDto serialize(Instrument instrument) {
 		InstrumentDto instrumentDto = ProductSerialize.serialize(instrument, new InstrumentDto());
-		instrumentDto.setProducedNumber(instrument.getProducedNumber());
 		instrumentDto.setInstrumentType(InstrumentTypeDto.of(instrument.getInstrumentType().getName()));
 		instrumentDto.setSerialNumber(instrument.getSerialNumber());
 

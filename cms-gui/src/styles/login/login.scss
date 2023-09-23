@@ -1,0 +1,67 @@
+@import "src/styles/base/colors";
+
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  border-radius: 20px;
+  background: $color-navi-blue;
+  box-shadow: rgba(0, 0, 0, 0.24) 0 3px 8px;
+}
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-login {
+  text-align: left;
+  color: $color-light-grey;
+  padding: 10px 0 10px 10px;
+  font-size: 1rem;
+}
+
+.input-login {
+  color: $color-light-grey;
+  font-size: 1rem;
+  outline: none;
+  height: 1em;
+  padding: 1em 1em;
+  border-radius: 20px;
+  border: none;
+  background: $color-dark-blue;
+  box-shadow: inset -6px 6px 10px 0 rgba(0, 0, 0, 0.2);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.input-login::placeholder {
+  color: $color-grey;
+}
+
+.button-login {
+  padding: 15px;
+  margin-top: calc(20px + 1em);
+  height: 3em;
+  font-size: 1rem;
+  border-radius: 20px;
+  border: none;
+  box-shadow: -6px 6px 10px 0 rgba(0, 0, 0, 0.2);
+  background: $color-grey;
+  color: $color-light-grey;
+  font-weight: bold;
+}
+
+.button-login:hover {
+  box-shadow: inset -6px 6px 10px 0 rgba(0, 0, 0, 0.2);
+  background: $color-dark-blue;
+  color: $color-turquoise;
+}

@@ -1,0 +1,83 @@
+@import "src/styles/base/colors";
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.config-wrapper {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-bottom: 15px;
+
+  .button-add {
+    border-radius: 10px;
+    border: none;
+    padding: 0 10px;
+    background-color: $color-navi-blue;
+    color: $color-light-grey;
+    font-weight: 900;
+    font-size: 20px;
+  }
+
+  .button-add:hover {
+    background-color: $color-grey;
+  }
+}
+
+.table-wrapper {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.table {
+  border-collapse: collapse;
+  width: 100%;
+
+  thead {
+    color: $color-white;
+  }
+
+  tbody {
+  }
+
+  tr {
+  }
+
+  th {
+  }
+
+  td {
+    text-align: center;
+  }
+
+  .title-row {
+    background-color: $color-navi-blue;
+  }
+
+  .title-head {
+  }
+
+  .selected {
+    background-color: $color-cloud-grey;
+  }
+
+  .bad {
+    background-color: $color-silver;
+  }
+
+  .actions {
+    display: flex;
+    justify-content: center;
+  }
+
+  .action {
+    border-radius: 5px;
+    padding: 0 10px;
+  }
+
+  .action:hover {
+    background-color: $color-grey;
+  }
+
+}

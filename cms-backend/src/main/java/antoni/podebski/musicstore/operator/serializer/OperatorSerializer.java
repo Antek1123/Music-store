@@ -15,6 +15,7 @@ public class OperatorSerializer {
         operatorDto.setSurname(operator.getSurname());
         operatorDto.setEmail(operator.getEmail());
         operatorDto.setPassword(PASSWORD_CHARACTERS);
+        operatorDto.setLastLoggedAt(operator.getLastLoggedAt());
 
         return operatorDto;
     }

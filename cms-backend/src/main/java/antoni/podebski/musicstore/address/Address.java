@@ -14,8 +14,8 @@ public class Address {
     @Id
     private String id;
 
-    @OneToOne(mappedBy = "address")
-    private Operator operator;
+//    @OneToOne(mappedBy = "address")
+//    private Operator operator;
 
     private String address;
 
@@ -34,13 +34,13 @@ public class Address {
         this.id = id;
     }
 
-    public Operator getOperator() {
-        return operator;
-    }
-
-    public void setOperator(Operator operator) {
-        this.operator = operator;
-    }
+//    public Operator getOperator() {
+//        return operator;
+//    }
+//
+//    public void setOperator(Operator operator) {
+//        this.operator = operator;
+//    }
 
     public String getAddress() {
         return address;
